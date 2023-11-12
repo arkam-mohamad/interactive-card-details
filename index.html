@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+<body>
+  <main>
+    <div class="cards">
+      <div class="image card-front">
+        <img src="./images/card-logo.svg" alt="card-logo" class="logo">
+        <div class="card-content">
+          <h1 id="cardNumber">0000 0000 0000 0000</h1>
+          <div class="small">
+            <p id="cardHolder">Jane Appleseed</p>
+            <p id="expiryDate">00/00</p>
+          </div>
+        </div>
+      </div>
+      <div class="image card-back">
+        <h2 id="showCVC">000</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="content">
+        <div>
+          <h3>Cardholder Name</h3>
+          <input type="text" id="username" placeholder="e.g. Jane Appleseed">
+          <small id="name-error" class="input-error hidden">Can't be blank</small>
+        </div>
+        <div>
+          <h3>Card Number</h3>
+          <input type="text" id="number" placeholder="e.g. 1234 5678 9123 0000">
+          <small id="number-error" class="input-error hidden">Can't be blank</small>
+        </div>
+        <div class="date-cvc">
+          <div class="date">
+            <h3>Exp. Date (MM/YY)</h3>
+            <div>
+              <div>
+                <input type="number" id="month" max="12" placeholder="MM" minlength="2">
+                <small id="date-error" class="input-error hidden">Can't be blank</small>
+              </div>
+              <div>
+                <input type="number" id="year" max="99" placeholder="YY" minlength="2">
+              </div>
+            </div>
+          </div>
+          <div class="cvc">
+            <h3>CVC</h3>
+            <input type="number" id="cvc" max="999" placeholder="e.g. 123" minlength="3">
+            <small id="cvc-error" class="input-error hidden">Can't be blank</small>
+          </div>
+        </div>
+        <button>Confirm</button>
+      </div>
+
+      <div class="completed hidden">
+        <img src="./images/icon-complete.svg" alt="icon-complete">
+        <h2>Thank you</h2>
+        <p>We've added your card details</p>
+        <button class="continue">Continue</button>
+      </div>
+    </div>
+  </main>
+  
+  <script src="./js/script.js"></script>
+</body>
+</html>
