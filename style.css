@@ -1,1 +1,189 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Grotesk', sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(270, 3%, 87%);
+}
+main{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top: 50px;
+  max-width: 1200px;
+  background-color: white;
+}
+.cards{
+  background-image: url('./images/bg-main-desktop.png');
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.image{
+  width:400px;
+  height: 200px;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+}
+.card-front{
+  background-image: url('./images/bg-card-front.png');
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 70px;
+  translate: 25%;
+}
+.card-content{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.small{
+  display: flex;
+  justify-content: space-between;
+  width: 110%;
+}
+.card-back{
+  background-image: url('./images/bg-card-back.png');
+  translate: 50%;
+  position: relative;
+}
+#showCVC{
+  position: absolute;
+  top: 43%;
+  right: 13%;
+}
 
+.container{
+  padding-right: 25%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.content{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.content > div{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+h3{
+  color: hsl(278, 68%, 11%);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+input{
+  padding: 10px;
+  border: 1px solid hsl(270, 3%, 87%);
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+#username{
+  text-transform: capitalize;
+}
+input.red{
+  border: 1px solid hsl(0, 100%, 66%);
+}
+input:focus, input:active{
+  outline: 0;
+  border: 1px solid hsl(278, 94%, 30%);
+}
+input::placeholder{
+  color: hsl(270, 3%, 87%);
+}
+small{
+  color: hsl(0, 100%, 66%);
+}
+.content .date-cvc{
+  flex-direction: row;
+  gap: 25px;
+}
+.date{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.date > div{
+  display: flex;
+  gap: 5px;
+}
+.date input{
+  width:50px
+}
+.cvc{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cvc input{
+  width: 100px;
+}
+button{
+  padding: 10px;
+  background-color: hsl(278, 68%, 11%);
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.completed{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 300px;
+}
+.completed button{
+  align-self: stretch;
+}
+
+.hidden{
+  display: none;
+}
+
+
+@media screen and (max-width:1150px) {
+  .container{
+    padding-right: 10px;
+  }
+  .cards{
+    padding: 100px 10px;
+  }
+  .image{
+    translate: 0;
+  }
+}
+
+@media screen and (max-width:768px) {
+  main{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+  }
+  .container{
+    padding: 20px;
+  }
+  .cards{
+    padding: 20px 30px;
+  }
+  .card-front{
+    order: 2;
+    translate: -30px -135px;
+  }
+  .completed{
+    align-self: center;
+  }
+}
